@@ -1,0 +1,16 @@
+<template name="starTemplate">
+  <view class='stars-container'>
+    <view class='stars'>
+      <block wx:for="{{stars}}" wx:key="key" wx:for-item="item">
+      <!-- <text>{{item}}</text> -->
+        <image src="{{item ? '../../images/star-selected.png' : '../../images/star.png'}}"></image>
+        <!-- <image src="../../images/star.png"></image>
+        <image src="../../images/star.png"></image>
+        <image src="../../images/star.png"></image>
+        <image src="../../images/star.png"></image> -->
+      </block>
+    </view>
+    <text class='star-score'>{{store}}</text>
+  </view>
+  
+</template>

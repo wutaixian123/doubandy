@@ -1,0 +1,9 @@
+<import src="../star-template/star-template.wxml"/>
+<template name="movieTemplate">
+  <!-- data-movidId在这里用不行，会冲突 一个moviedetail事件两个地方触发-->
+  <view class='movie-container' catchtap='moviedetail' data-movieid="{{movieId}}">
+    <image class='movie-img' src="{{movieImg}}"></image>
+    <text class='movie-title'>{{title}}</text>
+    <template is="starTemplate" data="{{stars:star,store:store}}"></template>
+  </view>
+</template>
